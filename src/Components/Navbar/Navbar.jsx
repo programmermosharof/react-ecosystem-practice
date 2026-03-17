@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from './Link';
+import { Menu } from 'lucide-react';
+
+
+
 
 const navigationLinks = [
   {
@@ -31,9 +35,11 @@ const navigationLinks = [
 
 const Navbar = () => {
     return (
-    <nav>
-   
-        <ul className='flex gap-4 justify-center'>
+    <nav className='flex justify-between mx-8'>
+         <Menu></Menu>
+         <h3>My NavBar</h3>
+        
+        <ul className='flex gap-4 '>
             {/* <li><a href="/Home">Home</a></li>
             <li><a href="/About">About</a></li>
             <li><a href="/Blog">Home</a></li> */}
@@ -45,7 +51,8 @@ const Navbar = () => {
           navigationLinks.map(route => <Link key={route.id} route={route}></Link>)
         }
         </ul>
-       </nav>
+        <button>Sign In</button>
+    </nav>
        
     );
 };
