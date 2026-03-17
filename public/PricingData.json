@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "name": "Basic Plan",
+    "price": "40.44/month",
+    "description": "Perfect for casual players who want to explore the world and start their journey.",
+    "features": [
+      "Access to Starter Maps",
+      "Standard Matchmaking",
+      "Basic Character Customization",
+      "100 Daily Credits",
+      "Community Forum Access"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Pro Plan",
+    "price": "80.99/month",
+    "description": "Designed for dedicated gamers looking for competitive edges and faster progress.",
+    "features": [
+      "Everything in Basic",
+      "Priority Matchmaking",
+      "Exclusive Weapon Skins",
+      "2x XP Multiplier",
+      "No In-game Ads"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Family Plan",
+    "price": "120.50/month",
+    "description": "The complete experience with early access and premium legendary rewards.",
+    "features": [
+      "Everything in Pro",
+      "Monthly 500 Gems Bundle",
+      "Early Access to Beta Maps",
+      "Private Tournament Hosting",
+      "VIP Support Channel"
+    ]
+  }
+]
