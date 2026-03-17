@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from './Link';
-import { Menu } from 'lucide-react';
-
-
+import { CircleX, Menu } from 'lucide-react';
 
 
 const navigationLinks = [
@@ -34,24 +32,25 @@ const navigationLinks = [
 ];
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
+  const links = navigationLinks.map(route => <Link key={route.id} route={route}></Link>)
+
     return (
-    <nav className='flex justify-between mx-8'>
-         <Menu></Menu>
+    <nav className='flex justify-between mx-8 mt-4'>
+        <span onClick={() => setOpen(!open)} className='flex gap-4'>
+          {open ? <CircleX className='md:hidden'></CircleX>: <Menu className='md:hidden'></Menu>}
+          <ul className={`md:hidden duration-1000 ${open ? 'top-12':'-top-40'} absolute bg-amber-950  z-10 `}>{links}</ul>
+            
+          
          <h3>My NavBar</h3>
+        </span>
         
-        <ul className='flex gap-4 '>
-            {/* <li><a href="/Home">Home</a></li>
-            <li><a href="/About">About</a></li>
-            <li><a href="/Blog">Home</a></li> */}
-            {/* {
-                navigationLinks.map(route =><li key={route.id}><a href={route.path}>{route.name}</a></li> )
-            }
-             */}
+        <ul className='md:flex hidden '>
           {
-          navigationLinks.map(route => <Link key={route.id} route={route}></Link>)
+           links
         }
         </ul>
-        <button>Sign In</button>
+        <button className='btn btn-primary'>Sign In</button>
     </nav>
        
     );
