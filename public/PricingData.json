@@ -1,8 +1,9 @@
 [
   {
     "id": "1",
+    "popular": true,
     "name": "Basic Plan",
-    "price": "40.44/month",
+    "price": "30/month",
     "description": "Perfect for casual players who want to explore the world and start their journey.",
     "features": [
       "Access to Starter Maps",
@@ -14,6 +15,7 @@
   },
   {
     "id": "2",
+    "popular": true,
     "name": "Pro Plan",
     "price": "80.99/month",
     "description": "Designed for dedicated gamers looking for competitive edges and faster progress.",
@@ -27,6 +29,7 @@
   },
   {
     "id": "3",
+    "popular": true,
     "name": "Family Plan",
     "price": "120.50/month",
     "description": "The complete experience with early access and premium legendary rewards.",
