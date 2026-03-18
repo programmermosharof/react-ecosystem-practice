@@ -1,6 +1,8 @@
 import React, { use } from 'react';
 import PricingCard from '../PricingCard/PricingCard';
 
+
+
 const PricingOption = ({pricingPromise}) => {
     const pricing = use(pricingPromise)
     console.log(pricing);
@@ -17,6 +19,8 @@ const PricingOption = ({pricingPromise}) => {
 
                     </PricingCard>)
                 }
+              
+               
             </div>
             
         </div>
