@@ -1,13 +1,17 @@
 
 import { Suspense } from 'react'
 import './App.css'
-import DaisyNav from './Components/DaisyNav/DaisyNav'
+
 import Navbar from './Components/Navbar/Navbar'
 import PricingOption from './Components/PricingOption/PricingOption'
+import ResultChart from './Components/ResultChart/ResultChart'
+import Data from './Components/ResultChart/data'
+import axios from 'axios'
+import Marks from './Components/ResultChart/Marks'
 
 
 
-
+const marksPromise = axios.get('Marks.json')
 const pricingPromise = fetch('PricingData.json')
 .then(res => res.json())
 function App() {
@@ -25,9 +29,15 @@ function App() {
 
         </PricingOption>
        </Suspense>
+       <Suspense fallback="Hi I am Coming">
+        <Marks marksPromise={marksPromise}>
+
+        </Marks>
+       </Suspense>
       
       {/* <DaisyPricing></DaisyPricing> */}
-       
+       <ResultChart></ResultChart>
+       {/* <Data></Data> */}
 
     </main>
     <footer>

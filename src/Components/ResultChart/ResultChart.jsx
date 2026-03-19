@@ -1,9 +1,31 @@
 import React from 'react';
+import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
+const students = [
+    { id: 1, name: "Mosharof", math: 85, bangla: 78, english: 92 },
+    { id: 2, name: "Mahin", math: 70, bangla: 80, english: 75 },
+    { id: 3, name: "Rakiv", math: 25, bangla: 85, english: 88 },
+    { id: 4, name: "Kamal", math: 65, bangla: 70, english: 68 },
+    { id: 5, name: "Arif", math: 58, bangla: 82, english: 90 },
+    { id: 6, name: "Sajib", math: 5, bangla: 75, english: 80 },
+    { id: 7, name: "Rony", math: 82, bangla: 88, english: 84 },
+    { id: 8, name: "Fahim", math: 95, bangla: 90, english: 92 },
+    { id: 9, name: "Hasan", math: 60, bangla: 65, english: 70 },
+    { id: 10, name: "Tanvir", math: 78, bangla: 80, english: 82 }
+];
 const ResultChart = () => {
     return (
-        <div>
-            
+        <div className='w-11/12 mx-auto mt-8'>
+            <LineChart width={1700}height={500} data={students}>
+               <Line  dataKey="math" stroke="#8884d8" ></Line>
+               <Line dataKey={"bangla"}></Line>
+               <Line dataKey={"english"}stroke="green" ></Line>
+               <XAxis dataKey={'name'}></XAxis>
+               <YAxis></YAxis>
+               <Tooltip></Tooltip>
+
+            </LineChart>
+          
         </div>
     );
 };

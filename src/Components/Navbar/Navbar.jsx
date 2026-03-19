@@ -36,7 +36,7 @@ const Navbar = () => {
   const links = navigationLinks.map(route => <Link key={route.id} route={route}></Link>)
 
     return (
-    <nav className='flex justify-between mx-8 mt-4'>
+    <nav className='flex w-11/12 mx-auto justify-between  mt-4'>
         <span onClick={() => setOpen(!open)} className='flex gap-4'>
           {open ? <CircleX className='md:hidden'></CircleX>: <Menu className='md:hidden'></Menu>}
           <ul className={`md:hidden duration-1000 ${open ? 'top-12':'-top-40'} absolute bg-amber-950  z-10 `}>{links}</ul>
