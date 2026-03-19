@@ -21,8 +21,8 @@ const Marks = ({marksPromise}) => {
     
     return (
         <div className='w-11/12 mx-auto'>
-            <BarChart width={1700}  data={marksChartData}>
-            <XAxis dataKey={"name"}></XAxis>
+            <BarChart width={1700} height={500}  data={marksChartData}>
+            <XAxis dataKey={"name"} fill='#0000cc'></XAxis>
             <YAxis></YAxis>
             <Tooltip></Tooltip>
             <Bar dataKey={"avg"} fill="#8884d8" ></Bar>

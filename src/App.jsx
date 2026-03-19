@@ -29,12 +29,12 @@ function App() {
 
         </PricingOption>
        </Suspense>
+      
        <Suspense fallback="Hi I am Coming">
         <Marks marksPromise={marksPromise}>
 
         </Marks>
        </Suspense>
-      
       {/* <DaisyPricing></DaisyPricing> */}
        <ResultChart></ResultChart>
        {/* <Data></Data> */}
